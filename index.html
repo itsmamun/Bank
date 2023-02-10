@@ -20,15 +20,81 @@
         <button id="login" type="button" class="btn btn-success">Success</button>
       </form>
     </div>
+    <div id="trangationPage">
+          
+        
+            <div class="row">
+              <div class="col-md-4">
+                <div id="Deposite">
+                    <h5>Deposite</h5>
+                    <h1>$ <span id="currentDeposit">00</span> </h1>
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div id="Widthrow">
+                <h5>Widthrow</h5>
+                <h1>$00</h1>
+            </div></div>
+              <div class="col-md-4">
+                <div id="Balance">
+                <h5>Balance</h5>
+                <h1>$1200</h1>
+            </div></div>
+            </div>
+            <!-- input box -->
+            
+              <div class="row" id="boxAlign">
+                <div class="col-md-6" >
+                  <div class="amountBox">
+                    <h4>Deposite</h4>
+                    <input id="depositAmount" type="text" class="form-control" placeholder="Deposite Amount" >
+                    <br>
+                    <button id="addDeposite" type="button" class="btn btn-success">Deposite</button>
+                  </div>
+                </div>
+                <div class="col-md-6" >
+                  <div class="amountBox">
+                    <h4>Widthrow</h4>
+                    <input type="text" class="form-control" placeholder="Deposite Amount" >
+                    <br>
+                    <button id="addwidthrow" type="button" class="btn btn-success">Widthrow</button>
+                  </div>
+                </div>
+               
+              </div>
+          
+         
+          
+        
+          
+    </div>
 
 
 
     <script>
+      // login btn eventListener
         const loginBtn = document.getElementById("login");
         loginBtn.addEventListener("click", function(){
             const loginArea = document.getElementById("firstPage");
             loginArea.style.display = "none";
+            const trangation = document.getElementById("trangationPage")
+            trangation.style.display = "block"
         })
+
+      // deposit btn even listener
+      const depositBtn = document.getElementById("addDeposite");
+      depositBtn.addEventListener("click", function(){
+        const depositOfAmount = document.getElementById("depositAmount").value;
+        const depositNumber = parseFloat(depositOfAmount); 
+
+        const currentOfDeposit = document.getElementById("currentDeposit").innerText;
+        const currentOfDepositNumber = parseFloat(currentOfDeposit);
+        const totalDeposit = depositNumber + currentOfDepositNumber ;
+        
+
+        document.getElementById("currentDeposit").innerText = totalDeposit;
+        document.getElementById("depositAmount").value = "";
+      })
     </script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>

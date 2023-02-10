@@ -12,3 +12,45 @@ body{
     margin-right: auto;
     box-shadow: 10px 10px 10px rgb(255, 255, 255);
 }
+#trangationPage{
+    display: none;
+}
+
+
+#statment{
+    
+}
+
+#Deposite{
+    background-color: darkorange;
+    color: white;
+    padding: 15px;
+    border-radius: 30px;
+    
+}
+
+#Widthrow{
+    background-color: darkslategray;
+    color: white;
+    padding: 15px;
+    border-radius: 30px;
+}
+
+#Balance{
+    
+    background-color: blue;
+    color: white;
+    padding: 15px;
+    border-radius: 30px;
+}
+
+#boxAlign{
+    margin-top: 3%;
+}
+.amountBox{
+    background-color: rgb(234, 236, 236);
+    border-radius: 20px;
+    box-shadow: 0px 10px 10px rgb(201, 206, 238);
+    padding: 30px ;
+    margin: 0px 20px; 
+}
